@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace depiSession.Controllers;
 
-public class StudentController (AppDBContext context): Controller {
+public class StudentController (AppDBContext _context): Controller {
+    private readonly AppDBContext context = _context;
     // GET
     public IActionResult Index() {
         // context.Students.ToList();
