@@ -45,6 +45,7 @@ public class StudentController (AppDBContext context): Controller {
         student.Age = s.Age;
         student.Email = s.Email;
         student.Department = s.Department;
+      
         context.SaveChanges();
         return RedirectToAction("Index");
     }
